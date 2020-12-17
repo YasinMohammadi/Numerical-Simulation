@@ -10,7 +10,7 @@ def Function(Var):
     
     return mathFunction
 
-Dimension = 5 
+rnd_sample = 5 
 shape_range = 5 
 shape_base = 0 
 Error = (10e-5) 
