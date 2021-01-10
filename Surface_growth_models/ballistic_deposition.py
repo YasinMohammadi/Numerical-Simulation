@@ -40,7 +40,6 @@ def linear_bd(time_step, ensemble, line_len):
                 hhh = [h[xrandom-1],h[(xrandom+1)%line_len],h[xrandom]+1]
                 h[xrandom] = np.max(hhh)
                 
-
             varh[t] += (np.var(h))**(0.5)
            
     varh = varh/ensemble
@@ -64,9 +63,6 @@ plt.ylabel('Ensemble Mean Variance')
 plt.title('Ballistic Deposition') 
 plt.show() 
 
-    
-
-test = square_bd(time_step, ensemble, sqr_len)
 np.savetxt("result.csv", result, delimiter=",")
 
   
