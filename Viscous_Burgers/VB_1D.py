@@ -27,7 +27,7 @@ for X in range(space_step):
 for T in range(time_step - 1):
     for X in range(space_step):
         P[T+1][X] = P[T][X] + C1 * (P[T][X]* (P[T][(X+1)%space_step] - P[T][X-1]) ) \
-        + C2 * (P[T][(X+1)%space_step] - 2 * P[T][X] + P[T][X-1])
+            + C2 * (P[T][(X+1)%space_step] - 2 * P[T][X] + P[T][X-1])
 
 np.savetxt('viscusBurgersEq.csv', P, delimiter=',', fmt='%g')
 
